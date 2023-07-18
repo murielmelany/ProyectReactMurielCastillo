@@ -13,19 +13,18 @@ const NavBar = () => {
         <Container>
         <Navbar className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             TodoBolsos
           </Navbar.Brand>
         </Container>
       </Navbar>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+          <Nav className="NavBar">
+            <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="#features">Nosotros</Nav.Link>
             <NavDropdown title="Categorias" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">CARTERAS</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">MOCHILAS</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">PORTA NOTEBOOKS</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4">ACCESORIOS</NavDropdown.Item>
+              <NavDropdown.Item href="/category/carteras">CARTERAS</NavDropdown.Item>
+              <NavDropdown.Item href="/category/mochilas">MOCHILAS</NavDropdown.Item>
+              <NavDropdown.Item href="/category/porta-notebooks">PORTA NOTEBOOKS</NavDropdown.Item>
               </NavDropdown>
 
           </Nav>
