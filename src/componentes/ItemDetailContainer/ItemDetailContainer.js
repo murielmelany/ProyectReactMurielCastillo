@@ -8,15 +8,13 @@ import { useParams } from "react-router-dom"
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState(null)
   let { itemId } = useParams();
-
-  console.log(itemId)
   
   useEffect(() => {
     getProductById(itemId)
     .then(response => {
         setProduct(response)
     })
-  }, [])
+  }, [itemId])
   
     return (
     <div className='ItemDetailContainer d-flex flex-row justify-content-center p-5'>

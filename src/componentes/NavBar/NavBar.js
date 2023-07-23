@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Cart from './Cart/Cart';
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,20 +14,22 @@ const NavBar = () => {
         <Container>
         <Navbar className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="/">
-            TodoBolsos
+        <Link to="/" className="nav-brand" style={{ textDecoration: 'none'}}>
+        
+          <Navbar.Brand>
+          TodoBolsos
           </Navbar.Brand>
+        </Link>
         </Container>
       </Navbar>
           <Nav className="NavBar">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="#features">Nosotros</Nav.Link>
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/nosotros" className="nav-link">Nosotros</Link>
             <NavDropdown title="Categorias" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/category/carteras">CARTERAS</NavDropdown.Item>
-              <NavDropdown.Item href="/category/mochilas">MOCHILAS</NavDropdown.Item>
-              <NavDropdown.Item href="/category/porta-notebooks">PORTA NOTEBOOKS</NavDropdown.Item>
-              </NavDropdown>
-
+              <Link className='dropdown-item' to="/category/carteras">CARTERAS</Link>
+              <Link className='dropdown-item' to="/category/mochilas">MOCHILAS</Link>
+              <Link className='dropdown-item' to="/category/porta-notebooks">PORTA NOTEBOOKS</Link>
+            </NavDropdown>
           </Nav>
               <Cart/>
         </Container>
