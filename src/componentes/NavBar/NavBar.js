@@ -6,8 +6,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Cart from './Cart/Cart';
 import { Link } from 'react-router-dom';
 
-
-
 const NavBar = () => {
     return(
         <Navbar expand="lg" bg="light" data-bs-theme="light">
