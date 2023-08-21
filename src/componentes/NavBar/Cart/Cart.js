@@ -1,14 +1,14 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import logoCarrito  from "./assets/carritologo.png";
 import { CartContext } from "../../../context/cart/CartContext";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   
-  const state = useContext(CartContext);
+  const {cart} = useContext(CartContext);
   const navigate = useNavigate()
 
-  const largo = state.cart.reduce((prev, item) => item.cant + prev, 0);
+  const largo = cart.length > 0 ? cart.reduce((prev, item) => item.cant + prev, 0) : 0;
 
   
   return (

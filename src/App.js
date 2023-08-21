@@ -1,10 +1,10 @@
 import './App.css';
-import ItemListContainer from './componentes/NavBar/ItemListContainer/ItemListContainer';
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import NavBar from './componentes/NavBar/NavBar';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CartProvider } from './context/cart/CartProvider';
-import CartContainer from './componentes/Cart/CartContainer/CartContainer';
+import CartContainer from './componentes/CartWidget/CartContainer/CartContainer';
 import { ToastContainer } from 'react-toastify';
 import Checkout from './componentes/Checkout/Checkout';
 

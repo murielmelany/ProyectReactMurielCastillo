@@ -5,6 +5,7 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
 import { doc, getDoc } from "firebase/firestore"
 import { db } from "../../firebase"
+import { Col, Container, Row, Spinner } from "react-bootstrap"
 
 
 const ItemDetailContainer = () => {
@@ -13,10 +14,6 @@ const ItemDetailContainer = () => {
   let { itemId } = useParams();
 
   useEffect(() => {
-    // getProductById(itemId)
-    //   .then(response => {
-    //     setProduct(response)
-    //   })
     const itemRedf = doc(db, "items", itemId);
 
     getDoc(itemRedf)
@@ -33,7 +30,13 @@ const ItemDetailContainer = () => {
 
   if (loading) {
     return (
-      <h2>Cargandoo.....</h2>
+      <Container>
+        <Row>
+          <Col lg={12} className="d-flex flex-row justify-content-center my-5">
+            <Spinner animation="border" variant="info" size="lg" />
+          </Col>
+        </Row>
+      </Container>
     )
   }
 

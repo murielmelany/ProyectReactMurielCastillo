@@ -48,7 +48,7 @@ const CartContainer = () => {
                                 
                                 return (
                                 <tr>
-                                    <td  ><img width={"171"} height={"180"} src={producto.img} /></td>
+                                    <td  ><img width={"171"} height={"180"} alt={producto.name} src={producto.img} /></td>
                                     <td style={{ verticalAlign:'middle', textAlign:'center' }} >{producto.name}</td>
                                     <td  style={{ verticalAlign:'middle', textAlign:'center' }}>{producto.cant}</td>
                                     <td  style={{ verticalAlign:'middle', textAlign:'center' }}>{parseToCLP(producto.price)}</td>
