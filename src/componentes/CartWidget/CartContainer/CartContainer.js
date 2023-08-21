@@ -15,7 +15,6 @@ const CartContainer = () => {
 
             if(cart.length > 0) {
                 const total = cart.reduce((acumulador, valor) => acumulador + (valor.price * valor.cant),0);
-                console.log(total);
                 setTotalCompra(total);
                 
             }
